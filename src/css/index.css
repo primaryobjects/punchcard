@@ -30,11 +30,9 @@
 
 @media (min-width: 943px) and (max-width: 979px) {
   .span7b {
-    margin-top: 50px;
     max-width: 500px;
   }
 
   .sidebar-nav {
-    margin-top: 70px;
   }  
 }
