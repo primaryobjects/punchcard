@@ -1,0 +1,40 @@
+.fa-code {
+  margin-top: 1px;
+}
+
+.span7b {
+  max-width: 700px;
+}
+
+.affix {
+  position: fixed;
+}
+
+.mid-page {
+  padding-top: 60px;
+}
+
+@media (max-width: 942px) {
+  .affix {
+    position: relative;
+  }
+
+  .sidebar-nav {
+    margin-top: 0;
+  }
+
+  .mid-page {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 943px) and (max-width: 979px) {
+  .span7b {
+    margin-top: 50px;
+    max-width: 500px;
+  }
+
+  .sidebar-nav {
+    margin-top: 70px;
+  }  
+}
