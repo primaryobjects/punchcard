@@ -2,6 +2,7 @@
   "name": "punchcards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://primaryobjects.github.io/punchcard",
   "devDependencies": {
     "react-scripts": "0.4.3"
   },
