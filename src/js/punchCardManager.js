@@ -26,7 +26,7 @@ export var PunchCardManager = {
     deck += ' 9|             O        O        O        O                          \n';
     deck += '  |__________________________________________________________________ \n';
 
-    return deck;
+    return PunchCardManager.initialize(deck);
   },
 
   initialize: function(deck) {
@@ -112,21 +112,3 @@ export var PunchCardManager = {
     return card;
   }
 };
-
-/*// Initialize our deck.
-var deck = setup();
-var deckHash = initialize(deck);
-
-// Setup input.
-var input = [
-  'Hello, world!',
-  'This is Reddit\'s r/dailyprogrammer challenge.',
-  'WRITE (6,7) FORMAT(13H HELLO, WORLD) STOP END'
-];
-
-// Encode a punch card for each input.
-input.forEach(function(test) {
-  var card = encode(test, deckHash);
-  $('#output').append('<b>' + test + '</b>');
-  $('#output').append('<pre>' + card + '</pre>');
-});*/

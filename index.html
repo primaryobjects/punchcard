@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./src/favicon.ico">
     <title>Punch Card Creator</title>
+    <meta name="description" content="Punch Card Creator App: Generate a legacy computer programming punch card from a text message, using the DEC9 alphabet encoding.">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   </head>
   <body id="top" data-spy="scroll" data-target="#side-navigation">
@@ -47,9 +48,14 @@
               <nav id="side-navigation" class="well sidebar-nav affix">
                 <ul class="nav nav-list">
                   <li class="nav-header">Menu</li>
-                  <li class="active"><a class="page-scroll" href="#top">App</a></li>
+                  <li class="active"><a class="page-scroll" href="#top">The App</a></li>
                   <li><a class="page-scroll" href="#challenge">The Challenge</a></li>
-                  <li><a class="page-scroll" href="#deck">Master Deck</a></li>
+                  <li><a class="page-scroll" href="#deck">The Master Deck</a></li>
+                  <li class="nav-header">Social</li>
+                  <li><a href="https://www.linkedin.com/in/korybecker" target="_blank">LinkedIn</a></li>
+                  <li><a href="http://github.com/primaryobjects" target="_blank">GitHub</a></li>
+                  <li><a href="http://twitter.com/primaryobjects" target="_blank">Twitter</a></li>
+                  <li><a href="https://plus.google.com/107815270870071104283" target="_blank">Google+</a></li>
                 </ul>
               </nav>
             </div>
@@ -66,12 +72,10 @@
                 <div class="span7b">
                   <div class=" document">
                     <h1 class="page-header">Punch Card Creator App</h1>
+                    <p>Enter some text to generate a legacy computer <a href="https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era" target="_blank">punch card</a>, encoded using the DEC9 alphabet.</p>
+
                     <div id="root"></div>
-                    <p>Union is a minimalist middleware framework for node.js. It's minimalist, but extensible. Union's request handling is compatible with `connect`, meaning that all existing `connect-middlewares` should work out of the box with union.</p>
-                    <h3>What problem does it solve?</h3>
-                    <p>It provides an easy way to interact with requests before and after they are processed. But it's primary value add is that it's a hybrid buffered, streaming middleware kernel that isn't coupled with any other software.</p>
-                    <h3>Integration with Flatiron</h3>
-                    <p>By using <code>flatiron.plugins.http</code> you can configure and control a union server. The middleware used by union are compatible with <a href="http://expressjs.com">express</a> and <a href="http://senchalabs.org/connect">connect</a>.</p>
+
                   </div>
                 </div>
             </div>
@@ -88,12 +92,51 @@
                 <div class="span7b">
                   <div class="document">
                     <h1 class="page-header">The Challenge</h1>
-                    <div id="root"></div>
-                    <p>Union is a minimalist middleware framework for node.js. It's minimalist, but extensible. Union's request handling is compatible with `connect`, meaning that all existing `connect-middlewares` should work out of the box with union.</p>
-                    <h3>What problem does it solve?</h3>
-                    <p>It provides an easy way to interact with requests before and after they are processed. But it's primary value add is that it's a hybrid buffered, streaming middleware kernel that isn't coupled with any other software.</p>
-                    <h3>Integration with Flatiron</h3>
-                    <p>By using <code>flatiron.plugins.http</code> you can configure and control a union server. The middleware used by union are compatible with <a href="http://expressjs.com">express</a> and <a href="http://senchalabs.org/connect">connect</a>.</p>
+                    <p>
+                      <p>
+                        This programming challenge comes from <a href="https://www.reddit.com/r/dailyprogrammer/comments/53sw7z/20160921_challenge_284_intermediate_punch_card/" target="_blank">/r/dailyprogrammer</a>. The goal is to create a program that will generate an ASCII art punchcard, encoded in the format shown below. The end result should include a near replica of the ASCII punch card, including diagonal notch and original message across the top.
+                      </p>
+
+                      <a href="https://en.wikipedia.org/wiki/Punched_card" target="_blank">Punch cards</a> are an older form of recording computer programming instructions. Many people here may think of them from the early digital computing era, but they actually go back to fairground organs and textile mills in the 19th century! The format most of us are familiar with was originally patented by Hollerith, using stiff card stock. Over the years this format changed slightly and varied on this them, including a diagonal cut corner. For this challenge we'll focus on the tail end of punch cards with IBM, GE and UNIVAC type cards.</p>
+
+                      <p>To use them, a program would be <a href="http://homepage.cs.uiowa.edu/~jones/cards/codes.html" target="_blank">transcribed</a> to the punch cards. Each column represented a single character, 80 columns to the card, 12 rows to the column. The zone rows can be used to have two punches per column.</p>
+
+                      <p>Each card vendor would have an alphabet, an array of characters that are numerically represented by the punches. Here's an example of the <strong>IBM model 026</strong> keypunch, showing you the punch codes and the order in which they appear.</p>
+
+                      <div class="highlight"><pre>
+FORT +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ ='    .)    $*    ,(
+     ________________________________________________________________
+    / -0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ       .     $     ,
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      ?     ?     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     ?     ?     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________</pre>
+                        </div>
+
+                      <p>
+                        You can see the first 12 characters are represented by a single punch, then the next 9 have two punches (with one in the upper zone), then the next 9 use the next zone as that second punch, the fourth 9 use the next zone as the second punch, then we start on the lower zone for the next sets of 6 with the upper zone punched increasingly.
+                      </p>
+
+                      <h3>
+                      Challenge Input
+                      </h3>
+
+                      <div class="highlight"><pre>
+DEC9 &-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'="[.<(+^!$*);\],%_>?
+3
+Hello, world!
+This is Reddit's r/dailyprogrammer challenge. 
+WRITE (6,7) FORMAT(13H HELLO, WORLD) STOP END</pre>
+                        </div>
                   </div>
                 </div>
             </div>
@@ -110,12 +153,26 @@
                 <div class="span7b">
                   <div class="document">
                     <h1 class="page-header">Master Deck</h1>
-                    <div id="root"></div>
-                    <p>Union is a minimalist middleware framework for node.js. It's minimalist, but extensible. Union's request handling is compatible with `connect`, meaning that all existing `connect-middlewares` should work out of the box with union.</p>
-                    <h3>What problem does it solve?</h3>
-                    <p>It provides an easy way to interact with requests before and after they are processed. But it's primary value add is that it's a hybrid buffered, streaming middleware kernel that isn't coupled with any other software.</p>
-                    <h3>Integration with Flatiron</h3>
-                    <p>By using <code>flatiron.plugins.http</code> you can configure and control a union server. The middleware used by union are compatible with <a href="http://expressjs.com">express</a> and <a href="http://senchalabs.org/connect">connect</a>.</p>
+                      <p>For this programming challenge, we're using the <strong>Digital Equipment Corporation DEC9</strong> keypunch. The master deck is encoded as shown below.</p>
+
+                      <div class="highlight"><pre>
+DEC9 &-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'="[.<(+^!$*);\],%_>?
+     ________________________________________________________________
+    /&-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'="[.<(+^!$*);\],%_>?
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________</pre>
+                        </div>
                   </div>
                 </div>
             </div>
@@ -128,7 +185,8 @@
     <hr>
 
     <footer>
-      Created by Kory Becker 9-23-2016
+      <p>Created by Kory Becker 9-23-2016</p>
+      <p>Developed with <a href="http://www.primaryobjects.com/2016/09/19/building-your-first-react-javascript-app/" target="_blank">React</a>.</p>
     </footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
